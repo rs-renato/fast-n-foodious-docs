@@ -13,6 +13,9 @@ Sistema de auto-atendimento de fast food (documentações). Projeto de conclusã
 - [fast-n-foodious-iac-storage](https://github.com/rodrigo-ottero/fast-n-foodious-iac-storage)
 - [fast-n-foodious-iac-compute](https://github.com/rodrigo-ottero/fast-n-foodious-iac-compute)
 
+### Documentação
+- [fast-n-foodious-docs](https://github.com/rodrigo-ottero/fast-n-foodious-docs)
+
 ### Sonar
 - [fast-n-foodious-ms-produto](https://sonarcloud.io/summary/overall?id=fast-n-foodious-org_ms-produto)
 - [fast-n-foodious-ms-pagamento](https://sonarcloud.io/summary/overall?id=fast-n-foodious-org_fast-n-foodious-ms-pagamento)
