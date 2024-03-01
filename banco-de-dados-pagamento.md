@@ -1,4 +1,4 @@
-# Banco de Dados
+# Banco de Dados (MS Pagamento)
 
 ## Banco de Dados escolhido
 
@@ -24,8 +24,6 @@ Durante a transição do projeto de monolito para microsserviços e sua migraç�
 
 Essa mudança permitiu flexibilidade no esquema, agilizando o desenvolvimento e evitando alterações frequentes nos esquemas existentes. Além disso, o MongoDB proporcionou desempenho superior em leituras intensivas, especialmente em consultas com documentos aninhados, simplificando operações sem a necessidade de junções complexas. Essa adaptação  não só manteve a coerência na nuvem, mas também contribuiu para a eficiência operacional e custos, com a oferta gratuita do MongoDB Atlas para fins educacionais no âmbito do projeto.
 
-## Collection
-
 ### Pagamento
 
-![fast-n-foodious-data-model.png](diagramas/fast-n-foodious-data-model.png)
+![fast-n-foodious-data-model.png](diagramas/fast-n-foodious-data-model-pagamento.png?raw=true)
