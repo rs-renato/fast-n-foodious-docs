@@ -1,0 +1,1940 @@
+{
+	"info": {
+		"_postman_id": "bd4ba5f8-3458-43d5-a774-1bd17c2952c4",
+		"name": "🍔   Fast & Foodious",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6317809",
+		"_collection_link": "https://renato-rs.postman.co/workspace/FIAP~9ea51334-b5bd-4327-8363-fd4c265c9dea/collection/6317809-bd4ba5f8-3458-43d5-a774-1bd17c2952c4?action=share&source=collection_link&creator=6317809"
+	},
+	"item": [
+		{
+			"name": "authentication",
+			"item": [
+				{
+					"name": "cognito",
+					"item": [
+						{
+							"name": "/oauth2/token (sem cpf)",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// Teste para verificar se a resposta contém um token JWT",
+											"pm.test(\"Verify response contains a JWT token\", function () {",
+											"    var responseToken = pm.response.json().token; // Obter o token da resposta",
+											"",
+											"    // Expressão regular para verificar o formato de um token JWT",
+											"    var jwtRegex = /^[A-Za-z0-9-_]+\\.[A-Za-z0-9-_]+\\.[A-Za-z0-9-_.+/=]+$/;",
+											"",
+											"    pm.expect(responseToken).to.match(jwtRegex); // Verificar se o token corresponde ao formato JWT",
+											"",
+											"    // Parse the response body as JSON",
+											"    const resp = pm.response.json();",
+											"",
+											"    // Extract the id_token from the response body",
+											"    const token = resp.token;",
+											"",
+											"    pm.environment.set('token', token)",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"client_id\": \"{{client_id}}\",\n    \"client_secret\": \"{{client_secret}}\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/oauth2/token",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"oauth2",
+										"token"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/oauth2/token?cpf={{cpf_anonimo}}",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// Teste para verificar se a resposta contém um token JWT",
+											"pm.test(\"Verify response contains a JWT token\", function () {",
+											"    var responseToken = pm.response.json().token; // Obter o token da resposta",
+											"",
+											"    // Expressão regular para verificar o formato de um token JWT",
+											"    var jwtRegex = /^[A-Za-z0-9-_]+\\.[A-Za-z0-9-_]+\\.[A-Za-z0-9-_.+/=]+$/;",
+											"",
+											"    pm.expect(responseToken).to.match(jwtRegex); // Verificar se o token corresponde ao formato JWT",
+											"",
+											"    // Parse the response body as JSON",
+											"    const resp = pm.response.json();",
+											"",
+											"    // Extract the id_token from the response body",
+											"    const token = resp.token;",
+											"",
+											"    pm.environment.set('token', token)",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"client_id\": \"{{client_id}}\",\n    \"client_secret\": \"{{client_secret}}\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/oauth2/token?cpf={{cpf_anonimo}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"oauth2",
+										"token"
+									],
+									"query": [
+										{
+											"key": "cpf",
+											"value": "{{cpf_anonimo}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/oauth2/token?cpf={{cpf}}",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// Teste para verificar se a resposta contém um token JWT",
+											"pm.test(\"Verify response contains a JWT token\", function () {",
+											"    var responseToken = pm.response.json().token; // Obter o token da resposta",
+											"",
+											"    // Expressão regular para verificar o formato de um token JWT",
+											"    var jwtRegex = /^[A-Za-z0-9-_]+\\.[A-Za-z0-9-_]+\\.[A-Za-z0-9-_.+/=]+$/;",
+											"",
+											"    pm.expect(responseToken).to.match(jwtRegex); // Verificar se o token corresponde ao formato JWT",
+											"",
+											"    // Parse the response body as JSON",
+											"    const resp = pm.response.json();",
+											"",
+											"    // Extract the id_token from the response body",
+											"    const token = resp.token;",
+											"",
+											"    pm.environment.set('token', token)",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"client_id\": \"{{client_id}}\"\n    ,\"client_secret\": \"{{client_secret}}\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/oauth2/token?cpf={{cpf}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"oauth2",
+										"token"
+									],
+									"query": [
+										{
+											"key": "cpf",
+											"value": "{{cpf}}"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "fast-n-foodious-ms-produto",
+			"item": [
+				{
+					"name": "categoria",
+					"item": [
+						{
+							"name": "/v1/categoria",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// Teste de Status Code",
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"// Teste de Tipo de Conteúdo",
+											"pm.test(\"Content-Type is JSON\", function () {",
+											"    pm.response.to.have.header(\"Content-Type\", \"application/json; charset=utf-8\");",
+											"});",
+											"",
+											"// Teste de Estrutura e Propriedades dos Itens",
+											"pm.test(\"Verify JSON structure and properties\", function () {",
+											"    var jsonData = pm.response.json();",
+											"",
+											"    pm.expect(jsonData).to.be.an('array'); // Verifica se é um array",
+											"",
+											"    jsonData.forEach(function(item) {",
+											"        pm.expect(item).to.have.property('id').that.is.a('number');",
+											"        pm.expect(item).to.have.property('nome').that.is.a('string');",
+											"    });",
+											"",
+											"});",
+											"",
+											"// Teste de Quantidade de Itens no Array",
+											"pm.test(\"Verify the number of items in the array\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData).to.have.lengthOf.at.least(4); // Pelo menos 4 itens",
+											"});",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}:{{port_ms_produto}}/v1/categoria/",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port_ms_produto}}",
+									"path": [
+										"v1",
+										"categoria",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "produto",
+					"item": [
+						{
+							"name": "/v1/produto",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// Teste de Status Code",
+											"pm.test(\"Status code is 201\", function () {",
+											"    pm.response.to.have.status(201);",
+											"});",
+											"",
+											"// Teste de Tipo de Conteúdo",
+											"pm.test(\"Content-Type is JSON\", function () {",
+											"    pm.response.to.have.header(\"Content-Type\", \"application/json; charset=utf-8\");",
+											"});",
+											"",
+											"// Teste de Estrutura e Tipos de Dados",
+											"pm.test(\"Verify JSON structure and data types\", function () {",
+											"    var jsonData = pm.response.json();",
+											"",
+											"    pm.expect(jsonData).to.be.an('object'); // Verifica se é um objeto",
+											"",
+											"    pm.expect(jsonData).to.have.property('nome').that.is.a('string');",
+											"    pm.expect(jsonData).to.have.property('idCategoriaProduto').that.is.a('number');",
+											"    pm.expect(jsonData).to.have.property('descricao').that.is.a('string');",
+											"    pm.expect(jsonData).to.have.property('preco').that.is.a('number');",
+											"    pm.expect(jsonData).to.have.property('imagemBase64').that.is.a('string');",
+											"    pm.expect(jsonData).to.have.property('ativo').that.is.a('boolean');",
+											"",
+											"    pm.environment.set('produtoId', jsonData.id)",
+											"    pm.environment.set('produtoNome', jsonData.nome)",
+											"});",
+											""
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"// Gerar um ID aleatório",
+											"const randomId = Math.floor(Math.random() * 100); // Altere 100 para o valor máximo do ID desejado",
+											"",
+											"// Definir o ID aleatório como uma variável global no ambiente",
+											"pm.environment.set(\"randomId\", randomId);",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"nome\": \"sanduiche{{randomId}}\",\n  \"idCategoriaProduto\": {{categoriaId}},\n  \"descricao\": \"sanduiche delicioso\",\n  \"preco\": 4.99,\n  \"imagemBase64\": \"iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAIAAADTED8xAAAAAXNSR0IAr\",\n  \"ativo\": true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}:{{port_ms_produto}}/v1/produto/",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port_ms_produto}}",
+									"path": [
+										"v1",
+										"produto",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/v1/produto/{{produtoId}}",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// Teste de Status Code",
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"// Teste de Tipo de Conteúdo",
+											"pm.test(\"Content-Type is JSON\", function () {",
+											"    pm.response.to.have.header(\"Content-Type\", \"application/json; charset=utf-8\");",
+											"});",
+											"",
+											"// Teste de Estrutura e Tipos de Dados",
+											"pm.test(\"Verify JSON structure and data types\", function () {",
+											"    var jsonData = pm.response.json();",
+											"",
+											"    pm.expect(jsonData).to.be.an('object'); // Verifica se é um objeto",
+											"",
+											"    pm.expect(jsonData).to.have.property('nome').that.is.a('string');",
+											"    pm.expect(jsonData).to.have.property('idCategoriaProduto').that.is.a('number');",
+											"    pm.expect(jsonData).to.have.property('descricao').that.is.a('string');",
+											"    pm.expect(jsonData).to.have.property('preco').that.is.a('number');",
+											"    pm.expect(jsonData).to.have.property('imagemBase64').that.is.a('string');",
+											"    pm.expect(jsonData).to.have.property('ativo').that.is.a('boolean');",
+											"});",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"nome\": \"{{produtoNome}}\",\n  \"idCategoriaProduto\": {{categoriaId}},\n  \"descricao\": \"coca-cola lata 600ml\",\n  \"preco\": 4.99,\n  \"imagemBase64\": \"\",\n  \"ativo\": true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}:{{port_ms_produto}}/v1/produto/{{produtoId}}",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port_ms_produto}}",
+									"path": [
+										"v1",
+										"produto",
+										"{{produtoId}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/v1/produto/{{produtoId}}",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// Teste de Status Code",
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"// Teste de Tipo de Conteúdo",
+											"pm.test(\"Content-Type is JSON\", function () {",
+											"    pm.response.to.have.header(\"Content-Type\", \"application/json; charset=utf-8\");",
+											"});",
+											"",
+											"// Teste de Estrutura e Tipos de Dados",
+											"pm.test(\"Verify JSON structure and data types\", function () {",
+											"    var jsonData = pm.response.json();",
+											"",
+											"    pm.expect(jsonData).to.be.an('object'); // Verifica se é um objeto",
+											"",
+											"    pm.expect(jsonData).to.have.property('nome').that.is.a('string');",
+											"    pm.expect(jsonData).to.have.property('idCategoriaProduto').that.is.a('number');",
+											"    pm.expect(jsonData).to.have.property('descricao').that.is.a('string');",
+											"    pm.expect(jsonData).to.have.property('preco').that.is.a('number');",
+											"    pm.expect(jsonData).to.have.property('imagemBase64').that.is.a('string');",
+											"    pm.expect(jsonData).to.have.property('ativo').that.is.a('boolean');",
+											"    pm.expect(jsonData).to.have.property('id').that.is.a('number');",
+											"});",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}:{{port_ms_produto}}/v1/produto/{{produtoId}}",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port_ms_produto}}",
+									"path": [
+										"v1",
+										"produto",
+										"{{produtoId}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/v1/produto/categoria/{{categoriaId}}",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// Teste de Status Code",
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"// Teste de Tipo de Conteúdo",
+											"pm.test(\"Content-Type is JSON\", function () {",
+											"    pm.response.to.have.header(\"Content-Type\", \"application/json; charset=utf-8\");",
+											"});",
+											"",
+											"// Teste de Estrutura e Propriedades dos Itens",
+											"pm.test(\"Verify JSON structure and properties\", function () {",
+											"    var jsonData = pm.response.json();",
+											"",
+											"    pm.expect(jsonData).to.be.an('array'); // Verifica se é um array",
+											"",
+											"    jsonData.forEach(function(item) {",
+											"        pm.expect(item).to.have.property('id').that.is.a('number');",
+											"        pm.expect(item).to.have.property('nome').that.is.a('string');",
+											"        pm.expect(item).to.have.property('idCategoriaProduto').that.is.a('number');",
+											"        pm.expect(item).to.have.property('descricao').that.is.a('string');",
+											"        pm.expect(item).to.have.property('preco').that.is.a('number');",
+											"        pm.expect(item).to.have.property('imagemBase64').that.is.a('string');",
+											"        pm.expect(item).to.have.property('ativo').that.is.a('boolean');",
+											"    });",
+											"});",
+											"",
+											"// Teste de Quantidade de Itens no Array",
+											"pm.test(\"Verify the number of items in the array\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData).to.have.lengthOf.at.least(1);",
+											"});",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}:{{port_ms_produto}}/v1/produto/categoria/{{categoriaId}}",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port_ms_produto}}",
+									"path": [
+										"v1",
+										"produto",
+										"categoria",
+										"{{categoriaId}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/v1/produto/{{produtoId}}",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// Teste de Status Code",
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"// Teste para verificar se a resposta é \"true\"",
+											"pm.test(\"Verify response is true\", function () {",
+											"    pm.expect(pm.response.text()).to.eql(\"true\");",
+											"});",
+											"",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}:{{port_ms_produto}}/v1/produto/{{produtoId}}",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port_ms_produto}}",
+									"path": [
+										"v1",
+										"produto",
+										"{{produtoId}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "fast-n-foodious-ms-pedido",
+			"item": [
+				{
+					"name": "cliente",
+					"item": [
+						{
+							"name": "/v(1|2)/cliente",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// Teste de Status Code",
+											"pm.test(\"Status code is 201\", function () {",
+											"    pm.response.to.have.status(201);",
+											"",
+											"    if (pm.environment.get('cliente_api_version') === 'v1'){",
+											"        var jsonData = pm.response.json();",
+											"        pm.environment.set('clienteId', jsonData.id)",
+											"    }",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"function cpf() {",
+											"    const rnd = (n) => Math.round(Math.random() * n);",
+											"    const mod = (base, div) => Math.round(base - Math.floor(base / div) * div)",
+											"    const n = Array(9).fill('').map(() => rnd(9));",
+											"    let d1 = n.reduce((total, number, index) => (total + (number * (10 - index))), 0)",
+											"    d1 = 11 - mod(d1, 11);",
+											"    if (d1 >= 10) d1 = 0;",
+											"    let d2 = (d1 * 2) + n.reduce((total, number, index) => (total + (number * (11 - index))), 0)",
+											"    d2 = 11 - mod(d2, 11);",
+											"    if (d2 >= 10) d2 = 0;",
+											"    return `${n.join('')}${d1}${d2}`",
+											"}",
+											"// opicional para postman",
+											"pm.environment.set('cpf', cpf());",
+											"",
+											"// Gerar um ID aleatório",
+											"const randomId = Math.floor(Math.random() * 99); // Altere 1000 para o valor máximo do ID desejado",
+											"",
+											"// Definir o ID aleatório como uma variável global no ambiente",
+											"pm.environment.set(\"randomId\", randomId);",
+											"",
+											"if (pm.environment.get('cliente_api_version') === 'v1'){",
+											"    pm.environment.set('email', randomId + pm.environment.get('email'))",
+											"}"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nome\": \"new user\",\n    \"email\": \"{{email}}\",\n    \"cpf\": \"{{cpf}}\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}:{{port_ms_pedido}}/{{cliente_api_version}}/cliente",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port_ms_pedido}}",
+									"path": [
+										"{{cliente_api_version}}",
+										"cliente"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/v1/cliente/?cpf={{cpf}}",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// Teste de Status Code",
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"// Teste de Tipo de Conteúdo",
+											"pm.test(\"Content-Type is JSON\", function () {",
+											"    pm.response.to.have.header(\"Content-Type\", \"application/json; charset=utf-8\");",
+											"});",
+											"",
+											"// Teste de Estrutura e Tipos de Dados",
+											"pm.test(\"Verify JSON structure and data types\", function () {",
+											"    var jsonData = pm.response.json();",
+											"",
+											"    pm.expect(jsonData).to.be.an('object'); // Verifica se é um objeto",
+											"    pm.expect(jsonData).to.have.property('nome').that.is.a('string');",
+											"    pm.expect(jsonData).to.have.property('email').that.is.a('string');",
+											"    pm.expect(jsonData).to.have.property('cpf').that.is.a('string');",
+											"    pm.expect(jsonData).to.have.property('id').that.is.a('number');",
+											"",
+											"    pm.environment.set('clienteId', jsonData.id)",
+											"",
+											"});",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}:{{port_ms_pedido}}/v1/cliente/?cpf={{cpf}}",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port_ms_pedido}}",
+									"path": [
+										"v1",
+										"cliente",
+										""
+									],
+									"query": [
+										{
+											"key": "cpf",
+											"value": "{{cpf}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/v1/cliente/identifica?cpf={{cpf}}",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// Teste de Status Code",
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"// Teste de Tipo de Conteúdo",
+											"pm.test(\"Content-Type is JSON\", function () {",
+											"    pm.response.to.have.header(\"Content-Type\", \"application/json; charset=utf-8\");",
+											"});",
+											"",
+											"// Teste de Estrutura e Tipos de Dados",
+											"pm.test(\"Verify JSON structure and data types\", function () {",
+											"    var jsonData = pm.response.json();",
+											"",
+											"    pm.expect(jsonData).to.be.an('object'); // Verifica se é um objeto",
+											"    pm.expect(jsonData).to.have.property('nome').that.is.a('string');",
+											"    pm.expect(jsonData).to.have.property('email').that.is.a('string');",
+											"    pm.expect(jsonData).to.have.property('cpf').that.is.a('string');",
+											"    pm.expect(jsonData).to.have.property('id').that.is.a('number');",
+											"",
+											"    pm.environment.set('clienteId', jsonData.id)",
+											"});",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}:{{port_ms_pedido}}/v1/cliente/identifica?cpf={{cpf}}",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port_ms_pedido}}",
+									"path": [
+										"v1",
+										"cliente",
+										"identifica"
+									],
+									"query": [
+										{
+											"key": "cpf",
+											"value": "{{cpf}}"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "pedido",
+					"item": [
+						{
+							"name": "/v1/pedido",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// Teste de Status Code",
+											"pm.test(\"Status code is 201\", function () {",
+											"    pm.response.to.have.status(201);",
+											"});",
+											"",
+											"// Teste de Tipo de Conteúdo",
+											"pm.test(\"Content-Type is JSON\", function () {",
+											"    pm.response.to.have.header(\"Content-Type\", \"application/json; charset=utf-8\");",
+											"});",
+											"",
+											"// Teste de Estrutura e Tipos de Dados",
+											"pm.test(\"Verify JSON structure and data types\", function () {",
+											"    var jsonData = pm.response.json();",
+											"",
+											"    pm.expect(jsonData).to.be.an('object'); // Verifica se é um objeto",
+											"",
+											"    pm.expect(jsonData).to.have.property('clienteId').that.is.a('number');",
+											"    pm.expect(jsonData).to.have.property('dataInicio').that.is.a('string');",
+											"    pm.expect(jsonData).to.have.property('estadoPedido').that.is.a('number');",
+											"    pm.expect(jsonData).to.have.property('ativo').that.is.a('boolean');",
+											"    pm.expect(jsonData).to.have.property('id').that.is.a('number');",
+											"",
+											"    pm.environment.set('pedidoId', jsonData.id)",
+											"});",
+											""
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"const moment = require('moment');",
+											"",
+											"// Captura a data atual no formato 'YYYY-MM-DD'",
+											"const dataInicio = moment().format('YYYY-MM-DD');",
+											"",
+											"// Define a variável de ambiente 'dataInicio' com o valor capturado",
+											"pm.environment.set('dataInicio', dataInicio);"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"clienteId\": {{clienteId}},\n    \"dataInicio\": \"{{dataInicio}}\",\n    \"estadoPedido\": 0,\n    \"ativo\": true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}:{{port_ms_pedido}}/v1/pedido/",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port_ms_pedido}}",
+									"path": [
+										"v1",
+										"pedido",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/v1/pedido/{{pedidoId}}",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// Teste de Status Code",
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"// Teste de Tipo de Conteúdo",
+											"pm.test(\"Content-Type is JSON\", function () {",
+											"    pm.response.to.have.header(\"Content-Type\", \"application/json; charset=utf-8\");",
+											"});",
+											"",
+											"// Teste de Estrutura e Tipos de Dados",
+											"pm.test(\"Verify JSON structure and data types\", function () {",
+											"    var jsonData = pm.response.json();",
+											"",
+											"    pm.expect(jsonData).to.be.an('object'); // Verifica se é um objeto",
+											"",
+											"    pm.expect(jsonData).to.have.property('clienteId').that.is.a('number');",
+											"    pm.expect(jsonData).to.have.property('dataInicio').that.is.a('string');",
+											"    pm.expect(jsonData).to.have.property('estadoPedido').that.is.a('number');",
+											"    pm.expect(jsonData).to.have.property('ativo').that.is.a('boolean');",
+											"    pm.expect(jsonData).to.have.property('id').that.is.a('number');",
+											"});",
+											""
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"const moment = require('moment');",
+											"",
+											"// Captura a data atual no formato 'YYYY-MM-DD'",
+											"const dataInicio = moment().format('YYYY-MM-DD');",
+											"",
+											"// Define a variável de ambiente 'dataInicio' com o valor capturado",
+											"pm.environment.set('dataInicio', dataInicio);"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"clienteId\": {{clienteId}},\n    \"dataInicio\": \"{{dataInicio}}\",\n    \"estadoPedido\": 0,\n    \"ativo\": true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}:{{port_ms_pedido}}/v1/pedido/{{pedidoId}}",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port_ms_pedido}}",
+									"path": [
+										"v1",
+										"pedido",
+										"{{pedidoId}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/v1/pedido/",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// Teste de Status Code",
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"pm.test(\"Verify response structure and data types\", function () {",
+											"    const jsonData = pm.response.json();",
+											"",
+											"    // Check if the response is an array",
+											"    pm.expect(jsonData).to.be.an('array');",
+											"",
+											"    // Check the structure of each object in the array",
+											"    jsonData.forEach((item, index) => {",
+											"        pm.expect(item).to.have.property('clienteId').that.is.a('number');",
+											"        pm.expect(item).to.have.property('dataInicio').that.is.a('string');",
+											"        pm.expect(item).to.have.property('estadoPedido').that.is.a('number');",
+											"        pm.expect(item).to.have.property('ativo').that.is.a('boolean');",
+											"        pm.expect(item).to.have.property('id').that.is.a('number');",
+											"        pm.expect(item).to.have.property('itensPedido').that.is.an('array');",
+											"    });",
+											"});",
+											""
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"const moment = require('moment');",
+											"",
+											"// Captura a data atual no formato 'YYYY-MM-DD'",
+											"const dataInicio = moment().format('YYYY-MM-DD');",
+											"",
+											"// Define a variável de ambiente 'dataInicio' com o valor capturado",
+											"pm.environment.set('dataInicio', dataInicio);"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}:{{port_ms_pedido}}/v1/pedido/",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port_ms_pedido}}",
+									"path": [
+										"v1",
+										"pedido",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/v1/pedido/pendentes",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// Teste de Status Code",
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"pm.test(\"Verify response structure and data types\", function () {",
+											"    const jsonData = pm.response.json();",
+											"",
+											"    // Check if the response is an array",
+											"    pm.expect(jsonData).to.be.an('array');",
+											"",
+											"    // Check the structure of each object in the array",
+											"    jsonData.forEach((item, index) => {",
+											"        pm.expect(item).to.have.property('clienteId').that.is.a('number');",
+											"        pm.expect(item).to.have.property('dataInicio').that.is.a('string');",
+											"        pm.expect(item).to.have.property('estadoPedido').that.is.a('number');",
+											"        pm.expect(item).to.have.property('ativo').that.is.a('boolean');",
+											"        pm.expect(item).to.have.property('id').that.is.a('number');",
+											"        pm.expect(item).to.have.property('itensPedido').that.is.an('array');",
+											"    });",
+											"});",
+											""
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"const moment = require('moment');",
+											"",
+											"// Captura a data atual no formato 'YYYY-MM-DD'",
+											"const dataInicio = moment().format('YYYY-MM-DD');",
+											"",
+											"// Define a variável de ambiente 'dataInicio' com o valor capturado",
+											"pm.environment.set('dataInicio', dataInicio);"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}:{{port_ms_pedido}}/v1/pedido/pendentes",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port_ms_pedido}}",
+									"path": [
+										"v1",
+										"pedido",
+										"pendentes"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/v1/pedido/estado/{{estadoPedido}}",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// Teste de Status Code",
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"pm.test(\"Verify response structure and data types\", function () {",
+											"    const jsonData = pm.response.json();",
+											"",
+											"    // Check if the response is an array",
+											"    pm.expect(jsonData).to.be.an('array');",
+											"",
+											"    // Check the structure of each object in the array",
+											"    jsonData.forEach((item, index) => {",
+											"        pm.expect(item).to.have.property('clienteId').that.is.a('number');",
+											"        pm.expect(item).to.have.property('dataInicio').that.is.a('string');",
+											"        pm.expect(item).to.have.property('estadoPedido').that.is.a('number');",
+											"        pm.expect(item).to.have.property('ativo').that.is.a('boolean');",
+											"        pm.expect(item).to.have.property('id').that.is.a('number');",
+											"    });",
+											"});",
+											""
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"const moment = require('moment');",
+											"",
+											"// Captura a data atual no formato 'YYYY-MM-DD'",
+											"const dataInicio = moment().format('YYYY-MM-DD');",
+											"",
+											"// Define a variável de ambiente 'dataInicio' com o valor capturado",
+											"pm.environment.set('dataInicio', dataInicio);"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}:{{port_ms_pedido}}/v1/pedido/estado/{{estadoPedido}}",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port_ms_pedido}}",
+									"path": [
+										"v1",
+										"pedido",
+										"estado",
+										"{{estadoPedido}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/v1/pedido/{{pedidoId}}",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// Teste de Status Code",
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"// Teste de Tipo de Conteúdo",
+											"pm.test(\"Content-Type is JSON\", function () {",
+											"    pm.response.to.have.header(\"Content-Type\", \"application/json; charset=utf-8\");",
+											"});",
+											"",
+											"// Teste de Estrutura e Tipos de Dados",
+											"pm.test(\"Verify JSON structure and data types\", function () {",
+											"    var jsonData = pm.response.json();",
+											"",
+											"    pm.expect(jsonData).to.be.an('object'); // Verifica se é um objeto",
+											"",
+											"    pm.expect(jsonData).to.have.property('clienteId').that.is.a('number');",
+											"    pm.expect(jsonData).to.have.property('dataInicio').that.is.a('string');",
+											"    pm.expect(jsonData).to.have.property('estadoPedido').that.is.a('number');",
+											"    pm.expect(jsonData).to.have.property('ativo').that.is.a('boolean');",
+											"    pm.expect(jsonData).to.have.property('id').that.is.a('number');",
+											"});",
+											""
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"const moment = require('moment');",
+											"",
+											"// Captura a data atual no formato 'YYYY-MM-DD'",
+											"const dataInicio = moment().format('YYYY-MM-DD');",
+											"",
+											"// Define a variável de ambiente 'dataInicio' com o valor capturado",
+											"pm.environment.set('dataInicio', dataInicio);"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}:{{port_ms_pedido}}/v1/pedido/{{pedidoId}}",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port_ms_pedido}}",
+									"path": [
+										"v1",
+										"pedido",
+										"{{pedidoId}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/v1/pedido/{{pedidoId}}/estado",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// Teste de Status Code",
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"// Teste de Tipo de Conteúdo",
+											"pm.test(\"Content-Type is JSON\", function () {",
+											"    pm.response.to.have.header(\"Content-Type\", \"application/json; charset=utf-8\");",
+											"});",
+											"",
+											"// Teste de Estrutura e Tipos de Dados",
+											"pm.test(\"Verify JSON structure and data types\", function () {",
+											"    var jsonData = pm.response.json();",
+											"",
+											"    pm.expect(jsonData).to.be.an('object'); // Verifica se é um objeto",
+											"",
+											"    pm.expect(jsonData).to.have.property('estadoPedido').that.is.a('number');",
+											"});",
+											""
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"const moment = require('moment');",
+											"",
+											"// Captura a data atual no formato 'YYYY-MM-DD'",
+											"const dataInicio = moment().format('YYYY-MM-DD');",
+											"",
+											"// Define a variável de ambiente 'dataInicio' com o valor capturado",
+											"pm.environment.set('dataInicio', dataInicio);"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}:{{port_ms_pedido}}/v1/pedido/{{pedidoId}}/estado",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port_ms_pedido}}",
+									"path": [
+										"v1",
+										"pedido",
+										"{{pedidoId}}",
+										"estado"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/v1/pedido/checkout",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// Teste de Status Code",
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"// Teste de Tipo de Conteúdo",
+											"pm.test(\"Content-Type is JSON\", function () {",
+											"    pm.response.to.have.header(\"Content-Type\", \"application/json; charset=utf-8\");",
+											"});",
+											"",
+											"pm.test(\"Verify response structure and data types\", function () {",
+											"    const jsonData = pm.response.json();",
+											"",
+											"    // Check if the response is an object",
+											"    pm.expect(jsonData).to.be.an('object');",
+											"",
+											"    // Check the structure and data types of the 'pedido' object",
+											"    pm.expect(jsonData).to.have.property('pedido').that.is.an('object');",
+											"    const pedido = jsonData.pedido;",
+											"    pm.expect(pedido).to.have.property('clienteId').that.is.a('number');",
+											"    pm.expect(pedido).to.have.property('dataInicio').that.is.a('string');",
+											"    pm.expect(pedido).to.have.property('estadoPedido').that.is.a('number');",
+											"    pm.expect(pedido).to.have.property('ativo').that.is.a('boolean');",
+											"    pm.expect(pedido).to.have.property('id').that.is.a('number');",
+											"    pm.expect(pedido).to.have.property('total').that.is.a('number');",
+											"",
+											"    // Check the 'pagamento' object",
+											"    // pm.expect(jsonData).to.have.property('pagamento').that.is.an('object');",
+											"    // const pagamento = jsonData.pagamento;",
+											"    // pm.expect(pagamento).to.have.property('transacaoId').that.is.a('string');",
+											"    // pm.expect(pagamento).to.have.property('estadoPagamento').that.is.a('number');",
+											"",
+											"    // pm.environment.set('transacaoId', pagamento.transacaoId)",
+											"    pm.environment.set('totalPedido', pedido.total)",
+											"});",
+											"",
+											"setTimeout(function() {}, 2000);",
+											""
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}:{{port_ms_pedido}}/v1/pedido/checkout/{{pedidoId}}",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port_ms_pedido}}",
+									"path": [
+										"v1",
+										"pedido",
+										"checkout",
+										"{{pedidoId}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "item",
+					"item": [
+						{
+							"name": "/v1/item",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// Teste de Status Code",
+											"pm.test(\"Status code is 201\", function () {",
+											"    pm.response.to.have.status(201);",
+											"});",
+											"",
+											"// Teste de Tipo de Conteúdo",
+											"pm.test(\"Content-Type is JSON\", function () {",
+											"    pm.response.to.have.header(\"Content-Type\", \"application/json; charset=utf-8\");",
+											"});",
+											"",
+											"pm.test(\"Verify response structure and data types\", function () {",
+											"    const jsonData = pm.response.json();",
+											"",
+											"    // Check if the response is an object",
+											"    pm.expect(jsonData).to.be.an('object');",
+											"",
+											"    // Check the structure and data types of the properties",
+											"    pm.expect(jsonData).to.have.property('pedidoId').that.is.a('number');",
+											"    pm.expect(jsonData).to.have.property('produtoId').that.is.a('number');",
+											"    pm.expect(jsonData).to.have.property('quantidade').that.is.a('number');",
+											"    pm.expect(jsonData).to.have.property('id').that.is.a('number');",
+											"",
+											"    pm.environment.set('itemId', jsonData.id)",
+											"});",
+											"",
+											""
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"pedidoId\": {{pedidoId}},\n    \"produtoId\": {{produtoId}},\n    \"quantidade\": 10\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}:{{port_ms_pedido}}/v1/item/",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port_ms_pedido}}",
+									"path": [
+										"v1",
+										"item",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/v1/item/{{itemId}}",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// Teste de Status Code",
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"// Teste de Tipo de Conteúdo",
+											"pm.test(\"Content-Type is JSON\", function () {",
+											"    pm.response.to.have.header(\"Content-Type\", \"application/json; charset=utf-8\");",
+											"});",
+											"",
+											"pm.test(\"Verify response structure and data types\", function () {",
+											"    const jsonData = pm.response.json();",
+											"",
+											"    // Check if the response is an object",
+											"    pm.expect(jsonData).to.be.an('object');",
+											"",
+											"    // Check the structure and data types of the properties",
+											"    pm.expect(jsonData).to.have.property('pedidoId').that.is.a('number');",
+											"    pm.expect(jsonData).to.have.property('produtoId').that.is.a('number');",
+											"    pm.expect(jsonData).to.have.property('quantidade').that.is.a('number');",
+											"    pm.expect(jsonData).to.have.property('id').that.is.a('number');",
+											"});",
+											"",
+											""
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"pedidoId\": {{pedidoId}},\n    \"produtoId\": {{produtoId}},\n    \"quantidade\": 2\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}:{{port_ms_pedido}}/v1/item/{{itemId}}",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port_ms_pedido}}",
+									"path": [
+										"v1",
+										"item",
+										"{{itemId}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/v1/item/{{itemId}}",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// Teste de Status Code",
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"// Teste para verificar se a resposta é \"true\"",
+											"pm.test(\"Verify response is true\", function () {",
+											"    pm.expect(pm.response.text()).to.eql(\"true\");",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}:{{port_ms_pedido}}/v1/item/{{itemId}}",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port_ms_pedido}}",
+									"path": [
+										"v1",
+										"item",
+										"{{itemId}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "fast-n-foodious-pagamento",
+			"item": [
+				{
+					"name": "pagamento",
+					"item": [
+						{
+							"name": "/v1/pagamento/solicitar",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// Teste de Status Code",
+											"pm.test(\"Status code is 201\", function () {",
+											"    pm.response.to.have.status(201);",
+											"});",
+											"",
+											"pm.test(\"Verify response structure and data types\", function () {",
+											"    const jsonData = pm.response.json();",
+											"",
+											"    // Check if the response is an object",
+											"    pm.expect(jsonData).to.be.an('object');",
+											"",
+											"    // Check the structure and data types of the properties within 'pagamento'",
+											"    pm.expect(jsonData).to.have.property('pagamento').that.is.an('object');",
+											"    const pagamento = jsonData.pagamento;",
+											"    const qrCode = jsonData.qrCode;",
+											"",
+											"    pm.expect(pagamento).to.have.property('id').that.is.a('string');",
+											"    pm.expect(pagamento).to.have.property('pedidoId').that.is.a('number');",
+											"    pm.expect(pagamento).to.have.property('transacaoId').that.is.a('string');",
+											"    pm.expect(pagamento).to.have.property('estadoPagamento').that.is.a('number');",
+											"    pm.expect(pagamento).to.have.property('total').that.is.a('number');",
+											"    pm.expect(qrCode).that.is.a('string');",
+											"",
+											"    pm.environment.set('transacaoId', pagamento.transacaoId)",
+											"",
+											"});",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"pedidoId\": {{pedidoId}},\n    \"totalPedido\": {{totalPedido}}\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}:{{port_ms_pagamento}}/v1/pagamento/solicitar",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port_ms_pagamento}}",
+									"path": [
+										"v1",
+										"pagamento",
+										"solicitar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/v1/pagamento/estado?pedidoId={{pedidoId}}",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// Teste de Status Code",
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"// Teste de Tipo de Conteúdo",
+											"pm.test(\"Content-Type is JSON\", function () {",
+											"    pm.response.to.have.header(\"Content-Type\", \"application/json; charset=utf-8\");",
+											"});",
+											"",
+											"// Teste de Estrutura e Tipos de Dados",
+											"pm.test(\"Verify JSON structure and data types\", function () {",
+											"    var jsonData = pm.response.json();",
+											"",
+											"    pm.expect(jsonData).to.be.an('object'); // Verifica se é um objeto",
+											"    pm.expect(jsonData).to.have.property('estadoPagamento').that.is.a('number');",
+											"});",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}:{{port_ms_pagamento}}/v1/pagamento/estado?pedidoId={{pedidoId}}",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port_ms_pagamento}}",
+									"path": [
+										"v1",
+										"pagamento",
+										"estado"
+									],
+									"query": [
+										{
+											"key": "pedidoId",
+											"value": "{{pedidoId}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/v1/pagamento/{pedidoId}",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// Teste de Status Code",
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"pm.test(\"Verify response structure and data types\", function () {",
+											"    const jsonData = pm.response.json();",
+											"",
+											"    // Check if the response is an object",
+											"    pm.expect(jsonData).to.be.an('object');",
+											"",
+											"    // Check the structure and data types of the properties within 'pagamento'",
+											"    pm.expect(jsonData).to.have.property('pagamento').that.is.an('object');",
+											"    const pagamento = jsonData.pagamento;",
+											"    const qrCode = jsonData.qrCode;",
+											"",
+											"    pm.expect(pagamento).to.have.property('id').that.is.a('string');",
+											"    pm.expect(pagamento).to.have.property('pedidoId').that.is.a('number');",
+											"    pm.expect(pagamento).to.have.property('transacaoId').that.is.a('string');",
+											"    pm.expect(pagamento).to.have.property('estadoPagamento').that.is.a('number');",
+											"    pm.expect(pagamento).to.have.property('total').that.is.a('number');",
+											"    pm.expect(qrCode).that.is.a('string');",
+											"",
+											"    pm.environment.set('transacaoId', pagamento.transacaoId)",
+											"});",
+											""
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}:{{port_ms_pagamento}}/v1/pagamento/{{pedidoId}}",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port_ms_pagamento}}",
+									"path": [
+										"v1",
+										"pagamento",
+										"{{pedidoId}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/v1/pagamento/{{transacaoId}}/{{estadoPagamento}}",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// Teste de Status Code",
+											"pm.test(\"Status code is 201\", function () {",
+											"    pm.response.to.have.status(201);",
+											"});",
+											"",
+											"// Teste para verificar se a resposta é \"true\"",
+											"pm.test(\"Verify response is true\", function () {",
+											"    pm.expect(pm.response.text()).to.eql(\"true\");",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}:{{port_ms_pagamento}}/v1/pagamento/{{transacaoId}}/{{estadoPagamento}}",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port_ms_pagamento}}",
+									"path": [
+										"v1",
+										"pagamento",
+										"{{transacaoId}}",
+										"{{estadoPagamento}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "hdme4mgk1j.execute-api.us-east-1.amazonaws.com"
+		}
+	]
+}

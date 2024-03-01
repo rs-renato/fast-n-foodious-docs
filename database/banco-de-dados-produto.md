@@ -45,7 +45,7 @@ A desvantagem é que o cluster Aurora MySQL não possui uma versão gratuita, e 
 
 ### Diagrama
 
-![fast-n-foodious-ms-produto-data-model.png](diagramas/fast-n-foodious-data-model-produto.png)
+![fast-n-foodious-ms-produto-data-model.png](diagramas/data-model-produto.png)
 
 ### Código DBML
 

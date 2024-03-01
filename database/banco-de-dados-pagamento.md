@@ -26,4 +26,4 @@ Essa mudança permitiu flexibilidade no esquema, agilizando o desenvolvimento e 
 
 ### Pagamento
 
-![fast-n-foodious-data-model.png](diagramas/fast-n-foodious-data-model-pagamento.png?raw=true)
+![fast-n-foodious-data-model.png](diagramas/data-model-pagamento.png?raw=true)
