@@ -3,25 +3,34 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>MS Produto</title>
-    <link href="cardapio/normalize/normalize.css" rel="stylesheet" />
-    <link href="cardapio/themes/original/main.css" rel="stylesheet" />
-    <link href="cardapio/themes/original/colors.css" rel="stylesheet" />
+    <title>MS Pagamento - Webhook Report</title>
+    <link
+      href="geracao-de-pagamento/normalize/normalize.css"
+      rel="stylesheet"
+    />
+    <link
+      href="geracao-de-pagamento/themes/original/main.css"
+      rel="stylesheet"
+    />
+    <link
+      href="geracao-de-pagamento/themes/original/colors.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
-      <h1>MS Produto</h1>
-      <h2>Cardapio / Produto</h2>
+      <h1>MS Pagamento</h1>
+      <h2>Geracao de Pagamento</h2>
       <p>
         <span>Generated with</span>
         <a href="https://zaproxy.org"
           ><img
-            src="cardapio/zap32x32.png"
+            src="geracao-de-pagamento/zap32x32.png"
             alt="The ZAP logo"
             class="zap-logo"
           />ZAP</a
         >
-        <span>on Sat 2 Mar 2024, at 15:04:48</span>
+        <span>on Sat 2 Mar 2024, at 14:53:40</span>
       </p>
       <p>ZAP Version: 2.14.0</p>
     </header>
@@ -60,23 +69,32 @@
                 <a href="#alerts">Alerts</a>
                 <ol>
                   <li>
+                    <a href="#alerts--risk-2-confidence-3"
+                      ><span>Risk</span>=<span class="risk-level">Medium</span>,
+                      <span>Confidence</span>=<span class="confidence-level"
+                        >High</span
+                      >
+                      <span>(1)</span></a
+                    >
+                  </li>
+
+                  <li>
+                    <a href="#alerts--risk-2-confidence-2"
+                      ><span>Risk</span>=<span class="risk-level">Medium</span>,
+                      <span>Confidence</span>=<span class="confidence-level"
+                        >Medium</span
+                      >
+                      <span>(1)</span></a
+                    >
+                  </li>
+
+                  <li>
                     <a href="#alerts--risk-1-confidence-2"
                       ><span>Risk</span>=<span class="risk-level">Low</span>,
                       <span>Confidence</span>=<span class="confidence-level"
                         >Medium</span
                       >
                       <span>(2)</span></a
-                    >
-                  </li>
-
-                  <li>
-                    <a href="#alerts--risk-0-confidence-2"
-                      ><span>Risk</span>=<span class="risk-level"
-                        >Informational</span
-                      >, <span>Confidence</span>=<span class="confidence-level"
-                        >Medium</span
-                      >
-                      <span>(1)</span></a
                     >
                   </li>
                 </ol>
@@ -109,7 +127,7 @@
 
             <p>The following sites were included:</p>
             <ul class="sites-list">
-              <li><span class="site">http://localhost:3000</span></li>
+              <li><span class="site">http://localhost:3002</span></li>
             </ul>
 
             <p>
@@ -237,20 +255,20 @@
                   <span class="additional-info-percentages">(0.0%)</span>
                 </td>
                 <td>
-                  <span>0</span><br />
-                  <span class="additional-info-percentages">(0.0%)</span>
+                  <span>1</span><br />
+                  <span class="additional-info-percentages">(25.0%)</span>
+                </td>
+                <td>
+                  <span>1</span><br />
+                  <span class="additional-info-percentages">(25.0%)</span>
                 </td>
                 <td>
                   <span>0</span><br />
                   <span class="additional-info-percentages">(0.0%)</span>
                 </td>
                 <td>
-                  <span>0</span><br />
-                  <span class="additional-info-percentages">(0.0%)</span>
-                </td>
-                <td>
-                  <span>0</span><br />
-                  <span class="additional-info-percentages">(0.0%)</span>
+                  <span>2</span><br />
+                  <span class="additional-info-percentages">(50.0%)</span>
                 </td>
               </tr>
               <tr>
@@ -265,7 +283,7 @@
                 </td>
                 <td>
                   <span>2</span><br />
-                  <span class="additional-info-percentages">(66.7%)</span>
+                  <span class="additional-info-percentages">(50.0%)</span>
                 </td>
                 <td>
                   <span>0</span><br />
@@ -273,7 +291,7 @@
                 </td>
                 <td>
                   <span>2</span><br />
-                  <span class="additional-info-percentages">(66.7%)</span>
+                  <span class="additional-info-percentages">(50.0%)</span>
                 </td>
               </tr>
               <tr>
@@ -287,16 +305,16 @@
                   <span class="additional-info-percentages">(0.0%)</span>
                 </td>
                 <td>
-                  <span>1</span><br />
-                  <span class="additional-info-percentages">(33.3%)</span>
+                  <span>0</span><br />
+                  <span class="additional-info-percentages">(0.0%)</span>
                 </td>
                 <td>
                   <span>0</span><br />
                   <span class="additional-info-percentages">(0.0%)</span>
                 </td>
                 <td>
-                  <span>1</span><br />
-                  <span class="additional-info-percentages">(33.3%)</span>
+                  <span>0</span><br />
+                  <span class="additional-info-percentages">(0.0%)</span>
                 </td>
               </tr>
               <tr>
@@ -306,19 +324,19 @@
                   <span class="additional-info-percentages">(0.0%)</span>
                 </td>
                 <td>
+                  <span>1</span><br />
+                  <span class="additional-info-percentages">(25.0%)</span>
+                </td>
+                <td>
+                  <span>3</span><br />
+                  <span class="additional-info-percentages">(75.0%)</span>
+                </td>
+                <td>
                   <span>0</span><br />
                   <span class="additional-info-percentages">(0.0%)</span>
                 </td>
                 <td>
-                  <span>3</span><br />
-                  <span class="additional-info-percentages">(100.0%)</span>
-                </td>
-                <td>
-                  <span>0</span><br />
-                  <span class="additional-info-percentages">(0.0%)</span>
-                </td>
-                <td>
-                  <span>3</span><br />
+                  <span>4</span><br />
                   <span class="additional-info-percentages">(100%)</span>
                 </td>
               </tr>
@@ -384,12 +402,8 @@
             <tbody>
               <tr>
                 <th scope="rowgroup" rowspan="1">Site</th>
-                <th scope="row">http://localhost:3000</th>
+                <th scope="row">http://localhost:3002</th>
 
-                <td>
-                  <span>0</span><br />
-                  <span class="additional-info-percentages">(0)</span>
-                </td>
                 <td>
                   <span>0</span><br />
                   <span class="additional-info-percentages">(0)</span>
@@ -399,8 +413,12 @@
                   <span class="additional-info-percentages">(2)</span>
                 </td>
                 <td>
-                  <span>1</span><br />
-                  <span class="additional-info-percentages">(3)</span>
+                  <span>2</span><br />
+                  <span class="additional-info-percentages">(4)</span>
+                </td>
+                <td>
+                  <span>0</span><br />
+                  <span class="additional-info-percentages">(4)</span>
                 </td>
               </tr>
             </tbody>
@@ -432,36 +450,48 @@
               <tr>
                 <th scope="row">
                   <a href="#alert-type-0"
+                    >Content Security Policy (CSP) Header Not Set</a
+                  >
+                </th>
+                <td class="risk-level">Medium</td>
+                <td>
+                  <span>1</span><br />
+                  <span class="additional-info-percentages">(25.0%)</span>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <a href="#alert-type-1">Missing Anti-clickjacking Header</a>
+                </th>
+                <td class="risk-level">Medium</td>
+                <td>
+                  <span>1</span><br />
+                  <span class="additional-info-percentages">(25.0%)</span>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <a href="#alert-type-2"
                     >Server Leaks Information via &quot;X-Powered-By&quot; HTTP
                     Response Header Field(s)</a
                   >
                 </th>
                 <td class="risk-level">Low</td>
                 <td>
-                  <span>3</span><br />
-                  <span class="additional-info-percentages">(100.0%)</span>
+                  <span>1</span><br />
+                  <span class="additional-info-percentages">(25.0%)</span>
                 </td>
               </tr>
               <tr>
                 <th scope="row">
-                  <a href="#alert-type-1"
+                  <a href="#alert-type-3"
                     >X-Content-Type-Options Header Missing</a
                   >
                 </th>
                 <td class="risk-level">Low</td>
                 <td>
                   <span>1</span><br />
-                  <span class="additional-info-percentages">(33.3%)</span>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">
-                  <a href="#alert-type-2">User Agent Fuzzer</a>
-                </th>
-                <td class="risk-level">Informational</td>
-                <td>
-                  <span>12</span><br />
-                  <span class="additional-info-percentages">(400.0%)</span>
+                  <span class="additional-info-percentages">(25.0%)</span>
                 </td>
               </tr>
             </tbody>
@@ -469,7 +499,7 @@
               <tr>
                 <th scope="row">Total</th>
                 <td></td>
-                <td>3</td>
+                <td>4</td>
               </tr>
             </tfoot>
           </table>
@@ -479,6 +509,317 @@
       <section id="alerts" class="alerts">
         <h2>Alerts</h2>
         <ol>
+          <li id="alerts--risk-2-confidence-3">
+            <h3>
+              <span>Risk</span>=<span class="risk-level">Medium</span>,
+              <span>Confidence</span>=<span class="confidence-level">High</span>
+              <span>(1)</span>
+            </h3>
+            <ol>
+              <li class="alerts--site-li">
+                <h4>
+                  <span class="site">http://localhost:3002</span>
+                  <span>(1)</span>
+                </h4>
+                <ol>
+                  <li>
+                    <h5>
+                      <a href="#alert-type-0"
+                        >Content Security Policy (CSP) Header Not Set</a
+                      >
+                      <span>(1)</span>
+                    </h5>
+                    <ol>
+                      <li>
+                        <details>
+                          <summary>
+                            <span class="request-method-n-url"
+                              >POST
+                              http://localhost:3002/v1/pagamento/df42306507d08c37ae47750bd7da1c5f11af234f50df056f8317c45db48ef348/1</span
+                            >
+                          </summary>
+
+                          <table class="alerts-table">
+                            <tr>
+                              <th scope="row">Alert tags</th>
+                              <td>
+                                <ul class="alert-tags-list">
+                                  <li>
+                                    <span
+                                      ><a
+                                        href="https://owasp.org/Top10/A05_2021-Security_Misconfiguration/"
+                                        >OWASP_2021_A05</a
+                                      ></span
+                                    >
+                                  </li>
+                                  <li>
+                                    <span
+                                      ><a
+                                        href="https://owasp.org/www-project-top-ten/2017/A6_2017-Security_Misconfiguration.html"
+                                        >OWASP_2017_A06</a
+                                      ></span
+                                    >
+                                  </li>
+                                </ul>
+                              </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Alert description</th>
+                              <td>
+                                <p>
+                                  Content Security Policy (CSP) is an added
+                                  layer of security that helps to detect and
+                                  mitigate certain types of attacks, including
+                                  Cross Site Scripting (XSS) and data injection
+                                  attacks. These attacks are used for everything
+                                  from data theft to site defacement or
+                                  distribution of malware. CSP provides a set of
+                                  standard HTTP headers that allow website
+                                  owners to declare approved sources of content
+                                  that browsers should be allowed to load on
+                                  that page — covered types are JavaScript, CSS,
+                                  HTML frames, fonts, images and embeddable
+                                  objects such as Java applets, ActiveX, audio
+                                  and video files.
+                                </p>
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <th scope="row">Request</th>
+                              <td>
+                                <details open="open">
+                                  <summary>
+                                    Request line and header section (203 bytes)
+                                  </summary>
+
+                                  <pre><code>POST http://localhost:3002/v1/pagamento/df42306507d08c37ae47750bd7da1c5f11af234f50df056f8317c45db48ef348/1 HTTP/1.1
+host: localhost:3002
+pragma: no-cache
+cache-control: no-cache
+content-length: 0
+
+</code></pre>
+                                </details>
+                                <details class="request-body" open="open">
+                                  <summary>Request body (0 bytes)</summary>
+
+                                  <pre><code></code></pre>
+                                </details>
+                              </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Response</th>
+                              <td>
+                                <details open="open">
+                                  <summary>
+                                    Status line and header section (231 bytes)
+                                  </summary>
+
+                                  <pre><code>HTTP/1.1 201 Created
+X-Powered-By: Express
+Content-Type: text/html; charset=utf-8
+Content-Length: 4
+ETag: W/&quot;4-X/5TO4MPCKAyY0ipFgr6/IraRNs&quot;
+Date: Sat, 02 Mar 2024 17:52:27 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+</code></pre>
+                                </details>
+                                <details class="response-body" open="open">
+                                  <summary>Response body (4 bytes)</summary>
+
+                                  <pre><code>true</code></pre>
+                                </details>
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <th scope="row">Solution</th>
+                              <td>
+                                <p>
+                                  Ensure that your web server, application
+                                  server, load balancer, etc. is configured to
+                                  set the Content-Security-Policy header.
+                                </p>
+                              </td>
+                            </tr>
+                          </table>
+                        </details>
+                      </li>
+                    </ol>
+                  </li>
+                </ol>
+              </li>
+            </ol>
+          </li>
+
+          <li id="alerts--risk-2-confidence-2">
+            <h3>
+              <span>Risk</span>=<span class="risk-level">Medium</span>,
+              <span>Confidence</span>=<span class="confidence-level"
+                >Medium</span
+              >
+              <span>(1)</span>
+            </h3>
+            <ol>
+              <li class="alerts--site-li">
+                <h4>
+                  <span class="site">http://localhost:3002</span>
+                  <span>(1)</span>
+                </h4>
+                <ol>
+                  <li>
+                    <h5>
+                      <a href="#alert-type-1"
+                        >Missing Anti-clickjacking Header</a
+                      >
+                      <span>(1)</span>
+                    </h5>
+                    <ol>
+                      <li>
+                        <details>
+                          <summary>
+                            <span class="request-method-n-url"
+                              >POST
+                              http://localhost:3002/v1/pagamento/df42306507d08c37ae47750bd7da1c5f11af234f50df056f8317c45db48ef348/1</span
+                            >
+                          </summary>
+
+                          <table class="alerts-table">
+                            <tr>
+                              <th scope="row">Alert tags</th>
+                              <td>
+                                <ul class="alert-tags-list">
+                                  <li>
+                                    <span
+                                      ><a
+                                        href="https://owasp.org/Top10/A05_2021-Security_Misconfiguration/"
+                                        >OWASP_2021_A05</a
+                                      ></span
+                                    >
+                                  </li>
+                                  <li>
+                                    <span
+                                      ><a
+                                        href="https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/11-Client-side_Testing/09-Testing_for_Clickjacking"
+                                        >WSTG-v42-CLNT-09</a
+                                      ></span
+                                    >
+                                  </li>
+                                  <li>
+                                    <span
+                                      ><a
+                                        href="https://owasp.org/www-project-top-ten/2017/A6_2017-Security_Misconfiguration.html"
+                                        >OWASP_2017_A06</a
+                                      ></span
+                                    >
+                                  </li>
+                                </ul>
+                              </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Alert description</th>
+                              <td>
+                                <p>
+                                  The response does not include either
+                                  Content-Security-Policy with
+                                  &#39;frame-ancestors&#39; directive or
+                                  X-Frame-Options to protect against
+                                  &#39;ClickJacking&#39; attacks.
+                                </p>
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <th scope="row">Request</th>
+                              <td>
+                                <details open="open">
+                                  <summary>
+                                    Request line and header section (203 bytes)
+                                  </summary>
+
+                                  <pre><code>POST http://localhost:3002/v1/pagamento/df42306507d08c37ae47750bd7da1c5f11af234f50df056f8317c45db48ef348/1 HTTP/1.1
+host: localhost:3002
+pragma: no-cache
+cache-control: no-cache
+content-length: 0
+
+</code></pre>
+                                </details>
+                                <details class="request-body" open="open">
+                                  <summary>Request body (0 bytes)</summary>
+
+                                  <pre><code></code></pre>
+                                </details>
+                              </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Response</th>
+                              <td>
+                                <details open="open">
+                                  <summary>
+                                    Status line and header section (231 bytes)
+                                  </summary>
+
+                                  <pre><code>HTTP/1.1 201 Created
+X-Powered-By: Express
+Content-Type: text/html; charset=utf-8
+Content-Length: 4
+ETag: W/&quot;4-X/5TO4MPCKAyY0ipFgr6/IraRNs&quot;
+Date: Sat, 02 Mar 2024 17:52:27 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+</code></pre>
+                                </details>
+                                <details class="response-body" open="open">
+                                  <summary>Response body (4 bytes)</summary>
+
+                                  <pre><code>true</code></pre>
+                                </details>
+                              </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Parameter</th>
+                              <td>
+                                <pre><code>x-frame-options</code></pre>
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <th scope="row">Solution</th>
+                              <td>
+                                <p>
+                                  Modern Web browsers support the
+                                  Content-Security-Policy and X-Frame-Options
+                                  HTTP headers. Ensure one of them is set on all
+                                  web pages returned by your site/app.
+                                </p>
+
+                                <p>
+                                  If you expect the page to be framed only by
+                                  pages on your server (e.g. it&#39;s part of a
+                                  FRAMESET) then you&#39;ll want to use
+                                  SAMEORIGIN, otherwise if you never expect the
+                                  page to be framed, you should use DENY.
+                                  Alternatively consider implementing Content
+                                  Security Policy&#39;s
+                                  &quot;frame-ancestors&quot; directive.
+                                </p>
+                              </td>
+                            </tr>
+                          </table>
+                        </details>
+                      </li>
+                    </ol>
+                  </li>
+                </ol>
+              </li>
+            </ol>
+          </li>
+
           <li id="alerts--risk-1-confidence-2">
             <h3>
               <span>Risk</span>=<span class="risk-level">Low</span>,
@@ -490,13 +831,13 @@
             <ol>
               <li class="alerts--site-li">
                 <h4>
-                  <span class="site">http://localhost:3000</span>
+                  <span class="site">http://localhost:3002</span>
                   <span>(2)</span>
                 </h4>
                 <ol>
                   <li>
                     <h5>
-                      <a href="#alert-type-0"
+                      <a href="#alert-type-2"
                         >Server Leaks Information via &quot;X-Powered-By&quot;
                         HTTP Response Header Field(s)</a
                       >
@@ -507,7 +848,8 @@
                         <details>
                           <summary>
                             <span class="request-method-n-url"
-                              >GET http://localhost:3000/sitemap.xml</span
+                              >POST
+                              http://localhost:3002/v1/pagamento/df42306507d08c37ae47750bd7da1c5f11af234f50df056f8317c45db48ef348/1</span
                             >
                           </summary>
 
@@ -564,14 +906,14 @@
                               <td>
                                 <details open="open">
                                   <summary>
-                                    Request line and header section (240 bytes)
+                                    Request line and header section (203 bytes)
                                   </summary>
 
-                                  <pre><code>GET http://localhost:3000/sitemap.xml HTTP/1.1
-host: localhost:3000
-user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36
+                                  <pre><code>POST http://localhost:3002/v1/pagamento/df42306507d08c37ae47750bd7da1c5f11af234f50df056f8317c45db48ef348/1 HTTP/1.1
+host: localhost:3002
 pragma: no-cache
 cache-control: no-cache
+content-length: 0
 
 </code></pre>
                                 </details>
@@ -587,24 +929,24 @@ cache-control: no-cache
                               <td>
                                 <details open="open">
                                   <summary>
-                                    Status line and header section (243 bytes)
+                                    Status line and header section (231 bytes)
                                   </summary>
 
-                                  <pre><code>HTTP/1.1 404 Not Found
+                                  <pre><code>HTTP/1.1 201 Created
 X-Powered-By: Express
-Content-Type: application/json; charset=utf-8
-Content-Length: 111
-ETag: W/&quot;6f-t/R16CiYakoJSduL0r/aHDm/ykw&quot;
-Date: Sat, 02 Mar 2024 18:04:13 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 4
+ETag: W/&quot;4-X/5TO4MPCKAyY0ipFgr6/IraRNs&quot;
+Date: Sat, 02 Mar 2024 17:52:27 GMT
 Connection: keep-alive
 Keep-Alive: timeout=5
 
 </code></pre>
                                 </details>
                                 <details class="response-body" open="open">
-                                  <summary>Response body (111 bytes)</summary>
+                                  <summary>Response body (4 bytes)</summary>
 
-                                  <pre><code>{&quot;status&quot;:404,&quot;message&quot;:&quot;Cannot GET /sitemap.xml&quot;,&quot;timestamp&quot;:&quot;2024-03-02T18:04:13.025Z&quot;,&quot;path&quot;:&quot;/sitemap.xml&quot;}</code></pre>
+                                  <pre><code>true</code></pre>
                                 </details>
                               </td>
                             </tr>
@@ -633,7 +975,7 @@ Keep-Alive: timeout=5
 
                   <li>
                     <h5>
-                      <a href="#alert-type-1"
+                      <a href="#alert-type-3"
                         >X-Content-Type-Options Header Missing</a
                       >
                       <span>(1)</span>
@@ -643,7 +985,8 @@ Keep-Alive: timeout=5
                         <details>
                           <summary>
                             <span class="request-method-n-url"
-                              >GET http://localhost:3000/v1/produto/1</span
+                              >POST
+                              http://localhost:3002/v1/pagamento/df42306507d08c37ae47750bd7da1c5f11af234f50df056f8317c45db48ef348/1</span
                             >
                           </summary>
 
@@ -713,14 +1056,14 @@ Keep-Alive: timeout=5
                               <td>
                                 <details open="open">
                                   <summary>
-                                    Request line and header section (241 bytes)
+                                    Request line and header section (203 bytes)
                                   </summary>
 
-                                  <pre><code>GET http://localhost:3000/v1/produto/1 HTTP/1.1
-host: localhost:3000
-user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36
+                                  <pre><code>POST http://localhost:3002/v1/pagamento/df42306507d08c37ae47750bd7da1c5f11af234f50df056f8317c45db48ef348/1 HTTP/1.1
+host: localhost:3002
 pragma: no-cache
 cache-control: no-cache
+content-length: 0
 
 </code></pre>
                                 </details>
@@ -736,24 +1079,24 @@ cache-control: no-cache
                               <td>
                                 <details open="open">
                                   <summary>
-                                    Status line and header section (236 bytes)
+                                    Status line and header section (231 bytes)
                                   </summary>
 
-                                  <pre><code>HTTP/1.1 200 OK
+                                  <pre><code>HTTP/1.1 201 Created
 X-Powered-By: Express
-Content-Type: application/json; charset=utf-8
-Content-Length: 119
-ETag: W/&quot;77-H7EpjHtkkxPlmS7RXtmaUVcg4PY&quot;
-Date: Sat, 02 Mar 2024 18:04:12 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 4
+ETag: W/&quot;4-X/5TO4MPCKAyY0ipFgr6/IraRNs&quot;
+Date: Sat, 02 Mar 2024 17:52:27 GMT
 Connection: keep-alive
 Keep-Alive: timeout=5
 
 </code></pre>
                                 </details>
                                 <details class="response-body" open="open">
-                                  <summary>Response body (119 bytes)</summary>
+                                  <summary>Response body (4 bytes)</summary>
 
-                                  <pre><code>{&quot;nome&quot;:&quot;X-Burger&quot;,&quot;idCategoriaProduto&quot;:1,&quot;descricao&quot;:&quot;X-Burger&quot;,&quot;preco&quot;:9,&quot;imagemBase64&quot;:&quot;string&quot;,&quot;id&quot;:1,&quot;ativo&quot;:true}</code></pre>
+                                  <pre><code>true</code></pre>
                                 </details>
                               </td>
                             </tr>
@@ -793,126 +1136,6 @@ Keep-Alive: timeout=5
               </li>
             </ol>
           </li>
-
-          <li id="alerts--risk-0-confidence-2">
-            <h3>
-              <span>Risk</span>=<span class="risk-level">Informational</span>,
-              <span>Confidence</span>=<span class="confidence-level"
-                >Medium</span
-              >
-              <span>(1)</span>
-            </h3>
-            <ol>
-              <li class="alerts--site-li">
-                <h4>
-                  <span class="site">http://localhost:3000</span>
-                  <span>(1)</span>
-                </h4>
-                <ol>
-                  <li>
-                    <h5>
-                      <a href="#alert-type-2">User Agent Fuzzer</a>
-                      <span>(1)</span>
-                    </h5>
-                    <ol>
-                      <li>
-                        <details>
-                          <summary>
-                            <span class="request-method-n-url"
-                              >GET http://localhost:3000/v1/produto</span
-                            >
-                          </summary>
-
-                          <table class="alerts-table">
-                            <tr>
-                              <th scope="row">Alert tags</th>
-                              <td>
-                                <ul class="alert-tags-list"></ul>
-                              </td>
-                            </tr>
-                            <tr>
-                              <th scope="row">Alert description</th>
-                              <td>
-                                <p>
-                                  Check for differences in response based on
-                                  fuzzed User Agent (eg. mobile sites, access as
-                                  a Search Engine Crawler). Compares the
-                                  response statuscode and the hashcode of the
-                                  response body with the original response.
-                                </p>
-                              </td>
-                            </tr>
-
-                            <tr>
-                              <th scope="row">Request</th>
-                              <td>
-                                <details open="open">
-                                  <summary>
-                                    Request line and header section (178 bytes)
-                                  </summary>
-
-                                  <pre><code>GET http://localhost:3000/v1/produto HTTP/1.1
-host: localhost:3000
-user-agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)
-pragma: no-cache
-cache-control: no-cache
-
-</code></pre>
-                                </details>
-                                <details class="request-body" open="open">
-                                  <summary>Request body (0 bytes)</summary>
-
-                                  <pre><code></code></pre>
-                                </details>
-                              </td>
-                            </tr>
-                            <tr>
-                              <th scope="row">Response</th>
-                              <td>
-                                <details open="open">
-                                  <summary>
-                                    Status line and header section (243 bytes)
-                                  </summary>
-
-                                  <pre><code>HTTP/1.1 404 Not Found
-X-Powered-By: Express
-Content-Type: application/json; charset=utf-8
-Content-Length: 109
-ETag: W/&quot;6d-737Mp4oW1p50C6Y4g69J921K9co&quot;
-Date: Sat, 02 Mar 2024 18:04:20 GMT
-Connection: keep-alive
-Keep-Alive: timeout=5
-
-</code></pre>
-                                </details>
-                                <details class="response-body" open="open">
-                                  <summary>Response body (109 bytes)</summary>
-
-                                  <pre><code>{&quot;status&quot;:404,&quot;message&quot;:&quot;Cannot GET /v1/produto&quot;,&quot;timestamp&quot;:&quot;2024-03-02T18:04:20.819Z&quot;,&quot;path&quot;:&quot;/v1/produto&quot;}</code></pre>
-                                </details>
-                              </td>
-                            </tr>
-                            <tr>
-                              <th scope="row">Parameter</th>
-                              <td>
-                                <pre><code>Header User-Agent</code></pre>
-                              </td>
-                            </tr>
-                            <tr>
-                              <th scope="row">Attack</th>
-                              <td>
-                                <pre><code>Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)</code></pre>
-                              </td>
-                            </tr>
-                          </table>
-                        </details>
-                      </li>
-                    </ol>
-                  </li>
-                </ol>
-              </li>
-            </ol>
-          </li>
         </ol>
       </section>
 
@@ -927,6 +1150,120 @@ Keep-Alive: timeout=5
           </p>
           <ol>
             <li id="alert-type-0">
+              <h4>Content Security Policy (CSP) Header Not Set</h4>
+              <table class="alert-types-table">
+                <tr>
+                  <th scope="row">Source</th>
+                  <td>
+                    <span>raised by a passive scanner</span>
+                    <span
+                      >(<a href="https://www.zaproxy.org/docs/alerts/10038/"
+                        >Content Security Policy (CSP) Header Not Set</a
+                      >)
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">CWE ID</th>
+                  <td>
+                    <a href="https://cwe.mitre.org/data/definitions/693.html"
+                      >693</a
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">WASC ID</th>
+                  <td>15</td>
+                </tr>
+                <tr>
+                  <th scope="row">Reference</th>
+                  <td>
+                    <ol>
+                      <li>
+                        <a
+                          href="https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy"
+                          >https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html"
+                          >https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html</a
+                        >
+                      </li>
+                      <li>
+                        <a href="https://www.w3.org/TR/CSP/"
+                          >https://www.w3.org/TR/CSP/</a
+                        >
+                      </li>
+                      <li>
+                        <a href="https://w3c.github.io/webappsec-csp/"
+                          >https://w3c.github.io/webappsec-csp/</a
+                        >
+                      </li>
+                      <li>
+                        <a href="https://web.dev/articles/csp"
+                          >https://web.dev/articles/csp</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://caniuse.com/#feat=contentsecuritypolicy"
+                          >https://caniuse.com/#feat=contentsecuritypolicy</a
+                        >
+                      </li>
+                      <li>
+                        <a href="https://content-security-policy.com/"
+                          >https://content-security-policy.com/</a
+                        >
+                      </li>
+                    </ol>
+                  </td>
+                </tr>
+              </table>
+            </li>
+            <li id="alert-type-1">
+              <h4>Missing Anti-clickjacking Header</h4>
+              <table class="alert-types-table">
+                <tr>
+                  <th scope="row">Source</th>
+                  <td>
+                    <span>raised by a passive scanner</span>
+                    <span
+                      >(<a href="https://www.zaproxy.org/docs/alerts/10020/"
+                        >Anti-clickjacking Header</a
+                      >)
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">CWE ID</th>
+                  <td>
+                    <a href="https://cwe.mitre.org/data/definitions/1021.html"
+                      >1021</a
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">WASC ID</th>
+                  <td>15</td>
+                </tr>
+                <tr>
+                  <th scope="row">Reference</th>
+                  <td>
+                    <ol>
+                      <li>
+                        <a
+                          href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options"
+                          >https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options</a
+                        >
+                      </li>
+                    </ol>
+                  </td>
+                </tr>
+              </table>
+            </li>
+            <li id="alert-type-2">
               <h4>
                 Server Leaks Information via &quot;X-Powered-By&quot; HTTP
                 Response Header Field(s)
@@ -977,7 +1314,7 @@ Keep-Alive: timeout=5
                 </tr>
               </table>
             </li>
-            <li id="alert-type-1">
+            <li id="alert-type-3">
               <h4>X-Content-Type-Options Header Missing</h4>
               <table class="alert-types-table">
                 <tr>
@@ -1017,35 +1354,6 @@ Keep-Alive: timeout=5
                         <a
                           href="https://owasp.org/www-community/Security_Headers"
                           >https://owasp.org/www-community/Security_Headers</a
-                        >
-                      </li>
-                    </ol>
-                  </td>
-                </tr>
-              </table>
-            </li>
-            <li id="alert-type-2">
-              <h4>User Agent Fuzzer</h4>
-              <table class="alert-types-table">
-                <tr>
-                  <th scope="row">Source</th>
-                  <td>
-                    <span>raised by an active scanner</span>
-                    <span
-                      >(<a href="https://www.zaproxy.org/docs/alerts/10104/"
-                        >User Agent Fuzzer</a
-                      >)
-                    </span>
-                  </td>
-                </tr>
-
-                <tr>
-                  <th scope="row">Reference</th>
-                  <td>
-                    <ol>
-                      <li>
-                        <a href="https://owasp.org/wstg"
-                          >https://owasp.org/wstg</a
                         >
                       </li>
                     </ol>
