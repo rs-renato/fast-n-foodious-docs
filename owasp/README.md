@@ -26,4 +26,4 @@
 
 ## Conclusão
 
-Nenhuma ação/atualização foi necessária, uma vez que não foram encontradas ameaças de risco alto pela ferramente OWASP ZAP.
+Nenhuma ação/atualização foi necessária, uma vez que não foram encontradas ameaças de risco alto pela ferramenta OWASP ZAP.
