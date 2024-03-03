@@ -12,25 +12,25 @@
 ### MS Produto
 
 - **Cardapio de produtos**
-  ![cardapio de produtos](pgn/a-cardapio-produtos-2024-03-03-report.png)
+  ![cardapio de produtos](png/a-cardapio-produtos-2024-03-03-report.png)
   [Link para relatório completo](pdf/a-cardapio-produtos-2024-03-03-report.pdf)
 
 ### MS Pedido
 
 - **Realizacao do pedido (checkout)**
-  ![Realizacao do pedido (checkout)](pgn/b-realizacao-do-pedido-checkout-2024-03-03-report.png)
+  ![Realizacao do pedido (checkout)](png/b-realizacao-do-pedido-checkout-2024-03-03-report.png)
   [Link para relatório completo](pdf/b-realizacao-do-pedido-checkout-2024-03-03-report.pdf)
 
 ### MS Pagamento
 
 - **Geracao do Pagamento**
-  ![Geracao do Pagamento](pgn/c-geracao-do-pagamento-2024-03-03-report.png)
+  ![Geracao do Pagamento](png/c-geracao-do-pagamento-2024-03-03-report.png)
   [Link para relatório completo](pdf/c-geracao-do-pagamento-2024-03-03-report.pdf)
 
   - Este endpoint retorna dados do pagamento referente ao ID do pedido, incluindo o `transacaoId` que sera utilizado para confirmacao do pagamento.
 
 - **Confirmacao do Pagamento:**
-  ![Confirmacao do Pagamento](pgn/d-confirmacao-do-pagamento-2024-03-03-report.png)
+  ![Confirmacao do Pagamento](png/d-confirmacao-do-pagamento-2024-03-03-report.png)
   [Link para relatório completo](pdf/d-confirmacao-do-pagamento-2024-03-03-report.pdf)
 
   - Este endpoint confirmara o pagamento do pedido, e ira atualizar o pagamento para `CONFIRMADO = 1` ou `REJEITADO = 2`
