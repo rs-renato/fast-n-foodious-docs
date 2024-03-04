@@ -1409,7 +1409,7 @@
 											"    pm.environment.set('totalPedido', pedido.total)",
 											"});",
 											"",
-											"setTimeout(function() {}, 2000);",
+											"// setTimeout(function() {}, 2000);",
 											""
 										],
 										"type": "text/javascript"
