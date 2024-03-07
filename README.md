@@ -15,6 +15,9 @@ Sistema de auto-atendimento de fast food (documentações). Projeto de conclusã
 - [fast-n-foodious-ms-pagamento](https://github.com/rodrigo-ottero/fast-n-foodious-ms-pagamento)
 - [fast-n-foodious-ms-pedido](https://github.com/rodrigo-ottero/fast-n-foodious-ms-pedido)
 
+## Postman
+- [Workspace Fast & Foodious](https://renato-rs.postman.co/workspace/FIAP~9ea51334-b5bd-4327-8363-fd4c265c9dea/overview)
+
 ## IaC
 - [fast-n-foodious-iac-network](https://github.com/rodrigo-ottero/fast-n-foodious-iac-network)
 - [fast-n-foodious-iac-storage](https://github.com/rodrigo-ottero/fast-n-foodious-iac-storage)
