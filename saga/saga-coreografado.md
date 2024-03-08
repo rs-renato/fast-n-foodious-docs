@@ -41,7 +41,7 @@ O padrão SAGA coreografado foi escolhido como a abordagem de comunicação entr
 
 # Sagas
 ## Checkout: Solicitação de Pagamento
-Integração entre microseriços de pedido e pagamento, no processo de checkout.
+Integração entre micro serviços de pedido e pagamento, no processo de checkout.
 ![Checkout: Solicitação de Pagamento](../diagramas/png/fast-n-foodious-aws-saga-checkout.png)
 1-Atualização de estado de pedido para `CHECKOUT`no Aurora Mysql
 2-Publicação de mensagem com dados do pedido (idPedido, totalPedido, clienteID, etc) na fila `solicitar-pagamento-req`
@@ -50,7 +50,7 @@ Integração entre microseriços de pedido e pagamento, no processo de checkout.
 **Nota:** Caso a solicitação de pagamento não seja processada após 03 tentativas, a mensagem é enviada para DLQ
 
 ## Webhook: Atualização estado de Pagamento Confirmado
-Integração entre microseriços de pagamento e pedido, no processo notificação de pagamento confirmado (webhook).
+Integração entre micro serviços de pagamento e pedido, no processo notificação de pagamento confirmado (webhook).
 ![Webhook: Pagamento Confirmado](../diagramas/png/fast-n-foodious-aws-saga-webhook-pagamento-confirmado.png)
 1-Notificação do provider de pagamento, com o status de pagamento confirmado
 2-Atualização de estado do pagamento para `CONFIRMADO` no DocumentDB
@@ -62,12 +62,12 @@ Integração entre microseriços de pagamento e pedido, no processo notificaçã
 **Nota:** Caso notificação de pagamento confirmado não seja processada após 03 tentativas, a mensagem é enviada para DLQ
 
 ## Webhook: Atualização estado de Pagamento Rejeitado
-Integração entre microseriços de pagamento e pedido, no processo notificação de pagamento rejeitado (webhook).
+Integração entre micro serviços de pagamento e pedido, no processo notificação de pagamento rejeitado (webhook).
 ![Webhook: Pagamento Rejeitado](../diagramas/png/fast-n-foodious-aws-saga-webhook-pagamento-rejeitado.png)
 1-Notificação do provider de pagamento, com o status de pagamento rejeitado
 2-Atualização de estado do pagamento para `REJEITADO` no DocumentDB
 3-Publicação de mensagem com dados do pagamento (idPagamento, transacaoId, etc) na fila `webhook-pagamento-rejeitado-res`
 4-Consumo da fila `webhook-pagamento-rejeitado-res`
 5-Atualização de estado de pedido para `PAGAMENTO_PENDENTE`no Aurora Mysql
-5/7-Envio de mensagem ao cliente sobre pagamento rejeitado.
+6/7-Envio de mensagem ao cliente sobre pagamento rejeitado.
 **Nota:** Caso notificação de pagamento rejeitado não seja processada após 03 tentativas, a mensagem é enviada para DLQ
