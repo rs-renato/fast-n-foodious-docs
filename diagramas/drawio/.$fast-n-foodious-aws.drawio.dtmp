@@ -1,4 +1,4 @@
-<mxfile host="Electron" modified="2024-03-12T10:51:39.664Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.2.8 Chrome/112.0.5615.165 Electron/24.2.0 Safari/537.36" etag="wAl5lhDJ_9-OI7f_LPPc" version="21.2.8" type="device" pages="8">
+<mxfile host="Electron" modified="2024-03-12T12:37:52.426Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.2.8 Chrome/112.0.5615.165 Electron/24.2.0 Safari/537.36" etag="cTFjbcMMqeO9_e_IVhEM" version="21.2.8" type="device" pages="8">
   <diagram name="Arquitetura AWS" id="PeA5X7Ix2_GFSgdP4TYd">
     <mxGraphModel dx="4608" dy="1214" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1342,7 +1342,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="Transição de Estados" id="4tS3huY5vbdGnRdsuJXX">
-    <mxGraphModel dx="2943" dy="1927" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+    <mxGraphModel dx="2788" dy="1544" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1374,12 +1374,10 @@
           <mxGeometry x="-957" y="-689" width="150" height="30" as="geometry" />
         </mxCell>
         <mxCell id="NLwuAS_bKRh_RvIULIhz-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="NLwuAS_bKRh_RvIULIhz-11" target="NLwuAS_bKRh_RvIULIhz-25" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="-537" y="-478" />
-              <mxPoint x="-537" y="-590" />
-            </Array>
-          </mxGeometry>
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JBAJ6k7f5RtlTPUkIwnS-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="NLwuAS_bKRh_RvIULIhz-11" target="JBAJ6k7f5RtlTPUkIwnS-1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="NLwuAS_bKRh_RvIULIhz-11" value="CHECKOUT" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
           <mxGeometry x="-757" y="-519" width="160" height="82" as="geometry" />
@@ -1399,13 +1397,13 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="NLwuAS_bKRh_RvIULIhz-25" value="RECEBIDO" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
-          <mxGeometry x="-497" y="-631" width="160" height="82" as="geometry" />
+          <mxGeometry x="-482" y="-519" width="160" height="82" as="geometry" />
         </mxCell>
         <mxCell id="NLwuAS_bKRh_RvIULIhz-26" value="&lt;b&gt;fast-n-foodious-pagamento&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="-527" y="-689" width="180" height="30" as="geometry" />
         </mxCell>
         <mxCell id="NLwuAS_bKRh_RvIULIhz-32" value="Estado assumido após a confirmação de pagamento" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="-307" y="-605" width="160" height="30" as="geometry" />
+          <mxGeometry x="-310" y="-489" width="160" height="30" as="geometry" />
         </mxCell>
         <mxCell id="NLwuAS_bKRh_RvIULIhz-38" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="NLwuAS_bKRh_RvIULIhz-36" target="NLwuAS_bKRh_RvIULIhz-37" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -1477,16 +1475,22 @@
           <mxGeometry x="-312" y="539" width="160" height="30" as="geometry" />
         </mxCell>
         <mxCell id="mHND28ZN7hJBKbFJOICc-1" value="v1.0" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" parent="1" vertex="1">
-          <mxGeometry x="-160" y="654" width="60" height="30" as="geometry" />
+          <mxGeometry x="-162" y="651" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="mHND28ZN7hJBKbFJOICc-2" value="v1.0" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" parent="1" vertex="1">
           <mxGeometry x="-157" y="-199" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="JBAJ6k7f5RtlTPUkIwnS-1" value="PAGAMENTO_PENDENTE" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="-482" y="-627" width="160" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="JBAJ6k7f5RtlTPUkIwnS-3" value="Estado assumido após a rejeição de pagamento" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-310" y="-596" width="160" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram name="Sagas" id="vTwxJenoMe7xLgepwXcV">
-    <mxGraphModel dx="993" dy="2177" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="838" dy="1794" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="k18E_pX3fMsg-P7O7LN7-0" />
         <mxCell id="k18E_pX3fMsg-P7O7LN7-1" parent="k18E_pX3fMsg-P7O7LN7-0" />
