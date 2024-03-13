@@ -53,3 +53,4 @@ scripts/schema/3-manual-test.sql
 **/*.bkp
 
 **/*.txt
+**/*.key
