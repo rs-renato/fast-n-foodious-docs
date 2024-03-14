@@ -32,8 +32,5 @@ Sistema de auto-atendimento de fast food (documentações). Projeto de conclusã
 - [fast-n-foodious workspace](https://fast-n-foodious.monday.com/workspaces/4361241)
 
 ## YouTube
-*Conceitual*
-[Fase 05: Fast n' Foodious - Arquitetura AWS - Parte 01](https://www.youtube.com/watch?v=6LlpKkwPdTw)
-
-*Demo*
-[Fase 05: Fast n' Foodious - Arquitetura AWS - Parte 02](https://www.youtube.com/watch?v=UXSolm7wukU)
+- [Apresentação Conceitual](https://www.youtube.com/watch?v=6LlpKkwPdTw)
+- [Demo](https://www.youtube.com/watch?v=UXSolm7wukU)
