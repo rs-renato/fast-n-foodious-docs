@@ -8,7 +8,7 @@ Sistema de auto-atendimento de fast food (documentações). Projeto de conclusã
 * [Links com os relatórios dos processamentos do OWASP ZAP](/owasp/README.md)
 * **//TODO** [Link com o relatório RIPD do sistema](/ripd/README.md)
 * [Link para o desenho da arquitetura](/diagramas/pdf/fast-n-foodious-aws.drawio.pdf)
-*  **//TODO** [Link com vídeo de apresentão do projeto](#)
+* [Link com vídeo de apresentação do projeto](#youtube)
 
 ## Micro Serviços
 - [fast-n-foodious-ms-produto](https://github.com/rodrigo-ottero/fast-n-foodious-ms-produto)
@@ -30,3 +30,10 @@ Sistema de auto-atendimento de fast food (documentações). Projeto de conclusã
 
 ## Monday
 - [fast-n-foodious workspace](https://fast-n-foodious.monday.com/workspaces/4361241)
+
+## YouTube
+*Conceitual*
+[Fase 05: Fast n' Foodious - Arquitetura AWS - Parte 01](https://www.youtube.com/watch?v=6LlpKkwPdTw)
+
+*Demo*
+[Fase 05: Fast n' Foodious - Arquitetura AWS - Parte 02](https://www.youtube.com/watch?v=UXSolm7wukU)
