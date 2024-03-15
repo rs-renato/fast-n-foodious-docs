@@ -17,6 +17,6 @@
 - **Medida para Tratar os Riscos**
   ![Medida para Tratar os Riscos](png/7-medida-para-tratar-os-riscos.png)
 
-## [Relatório Completo](#relatório-completo)
+## Relatório Completo
 
 [Link para relatório completo](pdf/fast-n-foodious-ripdp-report.pdf)
