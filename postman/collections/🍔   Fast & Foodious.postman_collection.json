@@ -710,6 +710,56 @@
 											"    pm.response.to.have.status(200);",
 											"});",
 											"",
+											"// Teste para verificar se a resposta é \"true\"",
+											"pm.test(\"Verify response is true\", function () {",
+											"    pm.expect(pm.response.text()).to.eql(\"true\");",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}:{{port_ms_pedido}}/{{cliente_api_version}}/cliente?cpf={{cpf}}",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port_ms_pedido}}",
+									"path": [
+										"{{cliente_api_version}}",
+										"cliente"
+									],
+									"query": [
+										{
+											"key": "cpf",
+											"value": "{{cpf}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/v1/cliente/?cpf={{cpf}}",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// Teste de Status Code",
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
 											"// Teste de Tipo de Conteúdo",
 											"pm.test(\"Content-Type is JSON\", function () {",
 											"    pm.response.to.have.header(\"Content-Type\", \"application/json; charset=utf-8\");",
