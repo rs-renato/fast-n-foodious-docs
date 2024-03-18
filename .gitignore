@@ -51,6 +51,3 @@ scripts/schema/3-manual-test.sql
 **/*/.tfstate
 **/*/.tfstate.backup
 **/*.bkp
-
-**/*.txt
-**/*.key
