@@ -1459,10 +1459,11 @@
 											"    pm.environment.set('totalPedido', pedido.total)",
 											"});",
 											"",
-											"// setTimeout(function() {}, 2000);",
+											"setTimeout(function() {}, 500);",
 											""
 										],
-										"type": "text/javascript"
+										"type": "text/javascript",
+										"packages": {}
 									}
 								},
 								{
@@ -1471,7 +1472,8 @@
 										"exec": [
 											""
 										],
-										"type": "text/javascript"
+										"type": "text/javascript",
+										"packages": {}
 									}
 								}
 							],
