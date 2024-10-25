@@ -1,23 +1,23 @@
 TLDR;
-Encontre todos os links necessários para a avalização aqui: https://github.com/rodrigo-ottero/fast-n-foodious-docs
+Encontre todos os links necessários para a avalização aqui: https://github.com/rs-renato/fast-n-foodious-docs
 
 --------------------------------------------------------------------------------------------------------------------------------------
 Projeto                         Baseline    URL
 --------------------------------------------------------------------------------------------------------------------------------------
 
 --- Micro Serviços --- 
-fast-n-foodious-ms-produto      v2.0.0      https://github.com/rodrigo-ottero/fast-n-foodious-ms-produto/tree/v2.0.0
-fast-n-foodious-ms-pedido       v2.0.0      https://github.com/rodrigo-ottero/fast-n-foodious-ms-pedido/tree/v2.0.0
-fast-n-foodious-ms-pagamento    v2.0.0      https://github.com/rodrigo-ottero/fast-n-foodious-ms-pagamento/tree/v2.0.0
+fast-n-foodious-ms-produto      v2.0.0      https://github.com/rs-renato/fast-n-foodious-ms-produto/tree/v2.0.0
+fast-n-foodious-ms-pedido       v2.0.0      https://github.com/rs-renato/fast-n-foodious-ms-pedido/tree/v2.0.0
+fast-n-foodious-ms-pagamento    v2.0.0      https://github.com/rs-renato/fast-n-foodious-ms-pagamento/tree/v2.0.0
 
 
 --- Postman --- 
 Workspace Fast & Foodious       -           https://renato-rs.postman.co/workspace/FIAP~9ea51334-b5bd-4327-8363-fd4c265c9dea/overview
 
 --- IaC ---
-fast-n-foodious-iac-network     v3.0.0      https://github.com/rodrigo-ottero/fast-n-foodious-iac-network/tree/v3.0.0
-fast-n-foodious-iac-storage     v3.0.0      https://github.com/rodrigo-ottero/fast-n-foodious-iac-storage/tree/v3.0.0
-fast-n-foodious-iac-compute     v3.0.0      https://github.com/rodrigo-ottero/fast-n-foodious-iac-compute/tree/v3.0.0
+fast-n-foodious-iac-network     v3.0.0      https://github.com/rs-renato/fast-n-foodious-iac-network/tree/v3.0.0
+fast-n-foodious-iac-storage     v3.0.0      https://github.com/rs-renato/fast-n-foodious-iac-storage/tree/v3.0.0
+fast-n-foodious-iac-compute     v3.0.0      https://github.com/rs-renato/fast-n-foodious-iac-compute/tree/v3.0.0
 
 --- Sonar Could ---
 fast-n-foodious-ms-produto      main        https://sonarcloud.io/summary/overall?id=fast-n-foodious-org_ms-produto
@@ -25,7 +25,7 @@ fast-n-foodious-ms-pagamento    main        https://sonarcloud.io/summary/overal
 fast-n-foodious-ms-pedido       main        https://sonarcloud.io/summary/overall?id=fast-n-foodious-org_fast-n-foodious-ms-pedido
 
 --- Docs ---
-Fast-n-foodious-docs		    main	    https://github.com/rodrigo-ottero/fast-n-foodious-docs
+Fast-n-foodious-docs		    main	    https://github.com/rs-renato/fast-n-foodious-docs
 
 --- YouTube ---
 Apresentação Conceitual		    -	        https://www.youtube.com/watch?v=6LlpKkwPdTw
